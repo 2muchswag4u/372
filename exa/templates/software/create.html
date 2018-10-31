@@ -1,0 +1,17 @@
+{% extends 'software/layout.html' %}
+{% block content %}
+<h3 class="center-align yellow lighten-2" style="border-top-right-radius: 0cm 50px;" padding: 10px;">Nuevo Trabajo</h3>
+<div class="card">
+    <div class="card-content">
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <br>
+        <input class="button is-success" type="submit" name="create" value="Enviar Trabajo">
+
+    </form>
+    </div>
+</div>
+<a href="/trabajos" class="btn">regresar</a>
+{% endblock %}

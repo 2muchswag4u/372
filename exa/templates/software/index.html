@@ -1,0 +1,27 @@
+{% extends 'software/layout.html' %}
+
+{% block content %}
+
+<ul class="collection with-header">
+  <li class="collection-header grey lighten-3"><h4>{{title}}</h4></li>
+  
+  {% for categoria in categorias %}
+  <ol>
+    <a href="/trabajos/{{categoria.name}}" class="button is-link is-fullwidth">{{categoria.name}}</a>
+    
+  </ol>
+  {% endfor %}
+ 
+ 
+</ul>
+<br>
+<div class="row ">
+  <div class="col s5 "><a style="display:block" class="button is-success is-medium" href="/create">Cargar nuevo trabajo</a></div>
+</div>
+<div class="row">
+  <div class="col s1">
+    <a style="display:block" class="button is-info" href="/admin">Admin Login</a>
+  </div>
+</div>
+
+{% endblock %}

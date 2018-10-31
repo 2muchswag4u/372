@@ -1,0 +1,16 @@
+{% extends 'software/layout.html' %}
+{% block content %}
+<h3 class="center-align red lighten-5" style="border-radius: 50px;" padding: 10px;">{{trabajo.titulo}}</h3>
+<div class="card">
+    <div class="card-content">
+        {{trabajo.detalle}}
+    </div>
+    <div class="card-action">
+        {{trabajo.creacion}}
+        <div style="float:right"><label>{{trabajo.autor}}</label>
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}

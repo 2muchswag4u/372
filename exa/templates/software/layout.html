@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Trabajos de investigacion Rogelio Lopez</title>
+  </head>
+  <body class="layout-documentation page-layout">
+    <nav id="navbar" class="navbar has-shadow is-spaced">
+   <div class="navbar has-shadow is-spaced">
+     <a href={% url 'software:index' %} class="navbar-item "><i class="material-icons">book</i>&nbsp;INVESTIGACIONES CIENTIFICAS</a>
+     
+ </nav>
+    <header class="container center-align">
+      <h1 class="center-align indigo darken-4" style="border-radius: 15px 50px 30px; ">Selecciona el tipo de investigacion para mostrar listado</h1>
+    </header>
+
+
+    <div class="container">
+        
+              {% block content %}
+             
+              <div class="content">
+                <ol class="is-lower-alpha">
+                </ol>
+                
+              </div>
+              {% endblock %}
+              
+          
+    </div>
+      <br><br>
+
+
+    </div>
+  </body>
+</html>

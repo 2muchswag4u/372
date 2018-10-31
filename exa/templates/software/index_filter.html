@@ -1,0 +1,29 @@
+{% extends 'software/layout.html' %}
+
+{% block content %}
+
+<ul class="collection with-header">
+  <br>
+  <li class="fas fa-heading fa-lg"><h1>{{titulo}}</h1></li>
+  <br>
+  <!-- {% if trabajos is None %}
+    <li class="collection-item"><h3>no se han ingresado trabajos!</h3></li>
+  {% else %} -->
+  {% for trabajo in trabajos %}
+    <li class="collection-item"><a class="button is-danger" href="/trabajos/details/{{trabajo.id}}">{{trabajo.titulo}}  <label style="float:right;">{{trabajo.autor}}</label> </a></li>
+
+  {% endfor %}
+  {% endif %}
+</ul>
+
+<br>
+<div class="row ">
+  <div class="col s5 "><a style="display:block" class="button is-success" href="/create">Enviar nuevo trabajo</a></div>
+</div>
+<div class="row">
+  <div class="col s1">
+    <a style="display:block" class="button is-info" href="/admin">Admin Login</a>
+  </div>
+</div>
+
+{% endblock %}
