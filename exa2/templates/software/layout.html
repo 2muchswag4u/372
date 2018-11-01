@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>SOFTWARE</title>
+  </head>
+  <body class="layout-documentation page-layout">
+    
+
+      {% for departamento in departamentos %}
+        <li class="collection-item"><a class="collection-item" href="/softwaredepartamento/{{departamento.nombre}}">{{departamento.nombre}}</a></li>
+      {% endfor %}
+    </ul>
+    <nav>
+     <div class="nav-wrapper light-blue lighten-1">
+       <a href={% url 'software:index' %} class="navbar-item"><i class="material-icons">list</i>&nbsp;Software</a>
+       
+     </div>
+   </nav id="navbar" class="navbar has-shadow is-spaced">
+    <header class="container center-align">
+      <h1 class="center-align light-blue lighten-4" style="border-radius: 50px; padding: 10px;">LISTA SOFTWARE</h1>
+    </header>
+
+
+    <div class="container">
+      {% block content %}
+      <div class="content">
+        <ol class="is-lower-alpha">
+        </ol>
+        
+      </div>
+      {% endblock %}
+      <br><br>
+
+
+    </div>
+  </body>
+  <script type="text/javascript">
+    $(".dropdown-trigger").dropdown();
+  </script>
+</html>

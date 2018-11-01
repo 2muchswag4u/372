@@ -1,0 +1,15 @@
+{% extends 'software/layout.html' %}
+
+{% block content %}
+<h3 class="center-align yellow lighten-3" style="border-radius: 50px; padding: 10px;">{{softwarepaquetes.titulo}}</h3>
+
+<div class="card">
+  <div class="card-content">
+    <label>Descripcion: </label> {{softwarepaquetes.descripcion}}
+  </div>
+  <div class="card-action">
+    <label>Departamento: </label> {{softwarepaquetes.departamento}}
+  </div>
+</div>
+<a href="/software" class="button is-info">regresar</a>
+{% endblock %}

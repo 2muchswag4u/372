@@ -1,0 +1,17 @@
+{% extends 'software/layout.html' %}
+
+{% block content %}
+
+<ul class="collection with-header">
+  <li class="collection-header grey lighten-3"><h4>{{titulo}}</h4></li>
+  {% for softwarepaq in softwarepaquetes %}
+    <li class="collection-item"><a class="collection-item" href="/soft_track/details/{{softwarepaq.id}}">{{softwarepaq.titulo}}<label style="float:right;">{{softwarepaq.departamento}}</label> </a></li>
+  {% endfor %}
+</ul>
+<br>
+<div class="row "><div class="col s5 "><a style="display:block" class="button is-success" href="/alta_software">Alta software</a></div></div>
+<div class="row"><div class="col s5 "><a style="display:block" class="button is-success" href="/alta_departamento">Alta Departamento</a></div></div>
+
+</div>
+
+{% endblock %}
